@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FragmentNavigation_August9</string>
+    <string name="next">Next</string>
+    <string name="enter_your_name">Enter your name!</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="enter_last_name">Enter Last Name</string>
+    <string name="nextBtn"><![CDATA[>]]></string>
+    <string name="email">Email</string>
+</resources>

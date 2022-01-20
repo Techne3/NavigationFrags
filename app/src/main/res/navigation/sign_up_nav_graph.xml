@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_nav_graph"
+    app:startDestination="@id/first_name_fragment">
+
+    <!-- name says which fragment the tag should be attached to
+            tools:layout is for devs to visualize the layout-->
+    <fragment
+        android:id="@+id/first_name_fragment"
+        android:name="com.example.fragmentnavigation_august9.FirstNameFragment"
+        tools:layout="@layout/fragment_first_name">
+        <action
+            android:id="@+id/action_first_name_fragment_to_email_fragment"
+            app:destination="@id/email_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/email_fragment"
+        android:name="com.example.fragmentnavigation_august9.EmailFragment"
+        tools:layout="@layout/email_fragment">
+        <action
+            android:id="@+id/action_email_fragment_to_password_fragment"
+            app:destination="@id/password_fragment" />
+
+        <argument
+            android:name="first_name"
+            app:argType="string" />
+
+        <argument
+            android:name="last_name"
+            app:argType="string" />
+
+        <argument
+        android:name="email"
+        android:defaultValue="t@gmail.com"
+        app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/password_fragment"
+        android:name="com.example.fragmentnavigation_august9.PasswordFragment"
+        app:startDestination="@id/password_fragment_to_sign_up_complete_fragment"
+        tools:layout="@layout/fragment_password">
+
+        <argument
+            android:name="first_name"
+            android:defaultValue="John"
+            app:argType="string" />
+
+        <argument
+            android:name="last_name"
+            android:defaultValue="Smith"
+            app:argType="string" />
+
+
+
+        <action
+            android:id="@+id/action_password_fragment_to_sign_up_complete_fragment"
+            app:destination="@id/sign_up_complete_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sign_up_complete_fragment"
+        android:name="com.example.fragmentnavigation_august9.SignUpCompleteFragment"
+        tools:layout="@layout/fragment_sign_up_complete">
+        <argument
+            android:name="first_name"
+            android:defaultValue="John"
+            app:argType="string" />
+
+        <argument
+            android:name="last_name"
+            android:defaultValue="Smith"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            android:defaultValue="T@gmail.com"
+            app:argType="string" />
+
+        <argument
+            android:name="password"
+            android:defaultValue="myPassword"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sign_up_complete_fragment_to_first_name_fragment"
+            app:destination="@id/first_name_fragment" />
+
+    </fragment>
+
+</navigation>
