@@ -35,7 +35,7 @@ class FirstNameFragment : Fragment() {
                     val lastName = lastNameEt.editText?.text.toString()
 
                     val direction =
-                        FirstNameFragmentDirections.actionFirstNameFragmentToEmailFragment(
+                        NameFragmentDirections.nameFragmentToPasswordFragmentAction(
                             firstName,
                             lastName
                         )
@@ -44,6 +44,5 @@ class FirstNameFragment : Fragment() {
         }
 
     }
-
 
 }

@@ -29,15 +29,16 @@ class EmailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
+
             nextBtn.setOnClickListener {
                 val email = emailEt.editText?.text.toString()
 
                 val directions =
-                 EmailFragmentDirections.actionEmailFragmentToPasswordFragment(
-                     args.firstName,
-                     args.lastName,
-                     email,
-                 )
+                    EmailFragmentDirections.emailFragmentToPasswordFragmentAction(
+                        args.firstName,
+                        args.lastName,
+                        email
+                    )
 
                 findNavController().navigate(directions)
             }
@@ -49,5 +50,3 @@ class EmailFragment : Fragment() {
         _binding = null
     }
 }
-
-

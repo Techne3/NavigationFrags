@@ -6,22 +6,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.example.fragmentnavigation_august9.databinding.FragmentPasswordBinding
-import com.example.fragmentnavigation_august9.databinding.FragmentSignUpCompleteBinding
+
+import com.example.fragmentnavigation_august9.databinding.UserItemBinding
 
 class SignUpCompleteFragment : Fragment() {
 
     private val args: SignUpCompleteFragmentArgs by navArgs()
 
-    private var _binding: FragmentSignUpCompleteBinding? = null
-    private val binding: FragmentSignUpCompleteBinding get() = _binding!!
+    private var _binding: UserItemBinding? = null
+    private val binding: UserItemBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSignUpCompleteBinding.inflate(inflater, container, false)
+        _binding = UserItemBinding.inflate(inflater, container, false)
         return binding.root
     }
 
