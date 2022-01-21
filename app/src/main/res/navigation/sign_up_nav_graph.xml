@@ -3,23 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sign_up_nav_graph"
-    app:startDestination="@id/start_fragment">
+    app:startDestination="@id/name_fragment">
 
     <!-- name says which fragment the tag should be attached to
             tools:layout is for devs to visualize the layout-->
-    <fragment
-        android:id="@+id/start_fragment"
-        android:name="com.example.fragmentnavigation_august9.StartFragment"
-        tools:layout="@layout/fragment_start">
-        <action
-            android:id="@+id/start_fragment_to_password_fragment_action"
-            app:destination="@id/name_fragment">
-        </action>
-    </fragment>
+
     <fragment
         android:id="@+id/name_fragment"
-        android:name="com.example.fragmentnavigation_august9.NameFragment"
-        tools:layout="@layout/fragment_name">
+        android:name="com.example.fragmentnavigation_august9.FirstNameFragment"
+        tools:layout="@layout/fragment_first_name">
         <action
             android:id="@+id/name_fragment_to_password_fragment_action"
             app:destination="@id/email_fragment">
@@ -35,7 +27,7 @@
         android:id="@+id/email_fragment"
         android:name="com.example.fragmentnavigation_august9.EmailFragment"
         app:startDestination="@+id/email_fragment_to_password_fragment"
-        tools:layout="@layout/fragment_email" >
+        tools:layout="@layout/email_fragment" >
         <argument
             android:name="first_name"
             app:argType="string" />
@@ -98,7 +90,7 @@
     <fragment
         android:id="@+id/sign_up_complete_fragment"
         android:name="com.example.fragmentnavigation_august9.SignUpCompleteFragment"
-        tools:layout="@layout/fragment_sign_up_complete">
+        tools:layout="@layout/user_item">
         <argument
             android:name="first_name"
             android:defaultValue="John"
@@ -117,6 +109,9 @@
             android:name="password"
             android:defaultValue="Password"
             app:argType="string" />
+        <action
+            android:id="@+id/action_sign_up_complete_fragment_to_name_fragment"
+            app:destination="@id/name_fragment" />
 
     </fragment>
 
