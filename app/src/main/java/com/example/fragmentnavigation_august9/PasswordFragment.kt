@@ -30,9 +30,6 @@ class PasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         with(binding) {
-            passwordEt.editText?.addTextChangedListener{ text ->
-                nextBtn.isEnabled = text.toString().length > 4
-            }
             nextBtn.setOnClickListener {
                 val password = passwordEt.editText?.text.toString()
 

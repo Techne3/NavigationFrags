@@ -40,9 +40,9 @@ class SignUpCompleteFragment : Fragment() {
             emailTv.text = args.email
             passwordTv.text = args.password
 
-            val user = User(args.firstName,args.lastName,args.email,args.password)
+            val users = User(firstName = args.firstName, lastName = args.lastName, email = args.email, password = args.password)
 
-            viewModel.addUser(user)
+            viewModel.addUser(users)
 
 
             backBtn.setOnClickListener{
@@ -56,7 +56,6 @@ class SignUpCompleteFragment : Fragment() {
         }
 
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

@@ -93,21 +93,21 @@
         tools:layout="@layout/user_item">
         <argument
             android:name="first_name"
-            android:defaultValue="John"
+            android:defaultValue="Tim"
             app:argType="string" />
 
         <argument
             android:name="last_name"
-            android:defaultValue="Singleton"
+            android:defaultValue="Sharkey"
             app:argType="string" />
         <argument
             android:name="email"
-            android:defaultValue="JohnS@ravebizz.com"
+            android:defaultValue="tim@gmail.com"
             app:argType="string" />
 
         <argument
             android:name="password"
-            android:defaultValue="Password"
+            android:defaultValue="passwords"
             app:argType="string" />
         <action
             android:id="@+id/action_sign_up_complete_fragment_to_name_fragment"
