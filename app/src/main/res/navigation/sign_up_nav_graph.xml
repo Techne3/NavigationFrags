@@ -111,7 +111,7 @@
             app:argType="string" />
         <action
             android:id="@+id/action_sign_up_complete_fragment_to_name_fragment"
-            app:destination="@id/name_fragment" />
+            app:popUpTo="@id/name_fragment" />
 
     </fragment>
 

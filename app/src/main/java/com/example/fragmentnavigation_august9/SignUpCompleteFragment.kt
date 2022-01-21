@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 import com.example.fragmentnavigation_august9.databinding.UserItemBinding
@@ -45,15 +46,10 @@ class SignUpCompleteFragment : Fragment() {
 
 
             backBtn.setOnClickListener{
-                val bundle = Bundle()
+                val directions =
+                    SignUpCompleteFragmentDirections.actionSignUpCompleteFragmentToNameFragment()
 
-
-
-                parentFragmentManager.beginTransaction()
-                    .replace(R.id.nav_host_fragment, FirstNameFragment::class.java, bundle)
-                    .addToBackStack(null)
-                    .commit()
-
+                findNavController().navigate(directions)
 
             }
 
